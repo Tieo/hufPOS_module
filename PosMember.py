@@ -42,13 +42,13 @@ while membernotdone:
     command = input('type user command: ')
 
     if command == '1': # 1) add Stock into a Stocktable
-        Scode, Sname, Sstock, Sprice = map(str, input('다음을 차례로 입력하세요: 재고번호, 재고이름, 재고수량, 재고가격\n:::').split())
-        Scode = Scode.strip(',')
-        Sname = Sname.strip(',')
-        Sstock = Sstock.strip(',')
-        stockCtrl.set_obj(Scode, Sname, Sstock, Sprice)
-        set_result = curs.execute("""SHOW FULL COLUMNS FROM t_product """)
-        print('the added stock is:', set_result)
+        Mnumb, Mphone, Mpoint = map(str, input('다음을 차례로 입력하세요: 재고번호, 재고이름, 재고수량, 재고가격\n:::').split())
+        mnumb = Mnumb.strip(',')
+        mphone = Mphone.strip(',')
+        mpoint = Mpoint.strip(',')
+        MemberCtrl.set_obj(mnumb, mphone, mpoint)
+        set_result = curs.execute("""SHOW FULL COLUMNS FROM t_member """)
+        print('the added member is:', set_result)
         print('\n\n\n')
 
     elif command == '2': # 2) find Stock
