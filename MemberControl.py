@@ -21,18 +21,18 @@ class MemberCtrl(Control):
 
     def search_obj(self, Mphone):
         try:
-            curs.execute("""SELECT * FROM t_member WHERE Mphone = '%s')""",
-                         (Mphone))
+            curs.execute("""SELECT * FROM t_member WHERE Mphone = %s""",
+                         Mphone)
             conn.commit()
             src_result = curs.fetchall()
             print(src_result)
-            return (src_result)
+            return src_result
         except :
             print('there is wrong data, try again')
 
     def update_obj(self, Mphone, Mpoint):
         try:
-            curs.execute("""UPDATE t_member SET %s WHERE Mphone = '%s')""",
+            curs.execute("""UPDATE t_member SET Mpoint = %s WHERE Mphone = %s""",
                          (Mpoint, Mphone))
             conn.commit()
             print(curs.lastrowid)
@@ -41,8 +41,8 @@ class MemberCtrl(Control):
 
     def del_obj(self, Mphone):
         try:
-            curs.execute("""DELETE FROM t_member WHERE Mphone = '%s')""",
-                         (Mphone))
+            curs.execute("""DELETE FROM t_member WHERE Mphone = %s""",
+                         Mphone)
             conn.commit()
             print(curs.lastrowid)
         except :

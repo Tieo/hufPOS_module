@@ -42,12 +42,7 @@ while membernotdone:
     command = input('type user command: ')
 
     if command == '1': # 1) add Member into a Membertable
-        Mnumb, Mphone, Mpoint = map(str, input('다음을 차례로 입력하세요: 회원번호, 전화번호, 포인트\n').split())
-        #input_buf = input('다음을 차례로 입력하세요: 회원번호, 전화번호, 포인트\n:::')
-        #input_ac = input_buf.split()
-        #Mnumber = input_ac[0]
-        #Mphone = input_ac[1]
-        #Mpoint = input_ac[2]
+        Mnumb, Mphone, Mpoint = map(str, input('다음을 차례로 입력하세요: 회원번호, 전화번호, 포인트\n').split(','))
         Mnumb = Mnumb.strip(',')
         Mphone = Mphone.strip(',')
         print(Mnumb, Mphone, Mpoint)
@@ -59,25 +54,25 @@ while membernotdone:
     elif command == '2': # 2) find Member
         Mphone = input('검색하고자 하는 회원 전화번호를 입력하세요:')
         print(Mphone)
-        mphone = Mphone.strip('')
-        search_result = memberCtrl.search_obj(mphone)
+        search_result = str(memberCtrl.search_obj(Mphone))
+        search_result = search_result.strip('(())')
         print('검색결과:', search_result)
         print('\n\n\n')
 
     elif command == '3': # 3) update Member
-        Mphone, Mpoint = map(str,input('수정하고자 하는 회원 전화번호, 포인트을 입력하세요:').split())
+        Mphone, Mpoint = map(str,input('수정하고자 하는 회원 전화번호, 포인트을 입력하세요:').split(','))
         Mphone = Mphone.strip(',')
-        Mpoint = int(Mpoint)
+        print(Mphone, Mpoint)
         memberCtrl.update_obj(Mphone, Mpoint)
         update_result = memberCtrl.search_obj(Mphone)
-        print('수정결과: %s', update_result)
+        print('수정결과:', update_result)
         print('\n\n\n')
 
     elif command == '4': # 4) delete Stock
-        Sname= input('삭제하고자 하는 회원 이름을 입력하세요:')
+        Mphone = input('삭제하고자 하는 회원 전화번호를 입력하세요:')
         memberCtrl.del_obj(Mphone)
         del_result = memberCtrl.search_obj(Mphone)
-        print('삭제결과: %s', del_result)
+        print('삭제결과:', del_result)
         print('\n\n\n')
 
     else:

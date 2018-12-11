@@ -26,17 +26,11 @@ class StockCtrl(Control):
 
     def search_obj(self, Sname):
         try:
-            print(Sname)
-            asterisk = '*'
-            search_sql = ("""SELCECT %s FROM t_stock WHERE Sname = %s""", (asterisk, Sname))
-            print(search_sql, Sname)
-            #curs.execute(search_sql, Sname)
             curs.execute("""SELECT * FROM t_stock WHERE Sname = %s""", Sname)
-            print(1)
             conn.commit()
             src_result = curs.fetchall()
             print(src_result)
-            return (src_result)
+            return src_result
         except :
             print('there is wrong data, try again')
 
