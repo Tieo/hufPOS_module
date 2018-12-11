@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6235de26-eb68-40af-bb20-36ba00fefdb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemberControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/MemberControl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PosMember.py" beforeDir="false" afterPath="$PROJECT_DIR$/PosMember.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StockControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/StockControl.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +41,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/PosMember.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+                <state relative-caret-position="350">
+                  <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
                   <folding>
                     <element signature="e#40#54#0" expanded="true" />
                   </folding>
@@ -286,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544097158626</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1206 수정">
+      <created>1544498081671</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544498081671</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -378,8 +383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PosMember.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="350">
+          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
           <folding>
             <element signature="e#40#54#0" expanded="true" />
           </folding>
