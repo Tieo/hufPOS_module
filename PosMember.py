@@ -42,10 +42,11 @@ while membernotdone:
     command = input('type user command: ')
 
     if command == '1': # 1) add Member into a Membertable
-        Mnumb, Mphone, Mpoint = map(str, input('다음을 차례로 입력하세요: 회원번호, 전화번호, 포인트\n:::').split())
+        Mnumb, Mphone, Mpoint = map(str, input('다음을 차례로 입력하세요: 회원번호, 전화번호, 포인트\n').split())
         mnumb = Mnumb.strip(',')
         mphone = Mphone.strip(',')
-        mpoint = Mpoint.strip(',')
+        mpoint = Mpoint
+        print(mphone, mpoint. mnumb)
         MemberCtrl.set_obj(mnumb, mphone, mpoint)
         set_result = curs.execute("""SHOW FULL COLUMNS FROM t_member """)
         print('the added member is:', set_result)
@@ -55,7 +56,7 @@ while membernotdone:
         Mphone = input('검색하고자 하는 회원 전화번호를 입력하세요:')
         print(Mphone)
         mphone = Mphone.strip('')
-        search_result = MemberCtrl.search_obj(Mphone)
+        search_result = MemberCtrl.search_obj(mphone)
         print('검색결과:', search_result)
         print('\n\n\n')
 

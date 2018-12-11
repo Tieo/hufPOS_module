@@ -21,7 +21,7 @@ class StockCtrl(Control):
                      (Scode, Sname, Sstock, Sprice))
             conn.commit()
             print(curs.lastrowid)
-        except:
+        except :
             print('there is wrong data, try again')
 
     def search_obj(self, Sname):
@@ -37,7 +37,7 @@ class StockCtrl(Control):
             src_result = curs.fetchall()
             print(src_result)
             return (src_result)
-        except:
+        except :
             print('there is wrong data, try again')
 
 
@@ -47,7 +47,7 @@ class StockCtrl(Control):
                       (Sstock,Sname))
             conn.commit()
             print(curs.lastrowid)
-        except:
+        except :
             print('there is wrong data, try again')
 
     def del_obj(self, Sname):
@@ -56,7 +56,7 @@ class StockCtrl(Control):
                          (Sname))
             conn.commit()
             print(curs.lastrowid)
-        except:
+        except :
             print('there is wrong data, try again')
 
 
