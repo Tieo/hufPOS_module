@@ -70,7 +70,7 @@ while membernotdone:
 
     elif command == '4': # 4) delete Stock
         Sname= input('삭제하고자 하는 회원 이름을 입력하세요:')
-        MemberCtrl.del_obj(Mphone) 
+        MemberCtrl.del_obj(Mphone)
         del_result = MemberCtrl.search_obj(Mphone)
         print('삭제결과: %s', del_result)
         print('\n\n\n')
