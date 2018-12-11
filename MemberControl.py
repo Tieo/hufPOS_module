@@ -9,6 +9,7 @@ curs = conn.cursor()
 
 class MemberCtrl(Control):
     def set_obj(self, Mnumb, Mphone, Mpoint):
+        print('values: %s, %s, %s', Mnumb, Mphone, Mpoint)
         try:
             curs.execute("""INSERT INTO t_member (Mnumb, Mphone, Mpoint)
                 VALUES (%s, %s, %s)""",
