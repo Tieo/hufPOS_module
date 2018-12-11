@@ -41,10 +41,10 @@ class StockCtrl(Control):
             print('there is wrong data, try again')
 
 
-    def update_obj(self, Sname, Vstock):
+    def update_obj(self, Sname, Sstock):
         try:
             curs.execute("""UPDATE t_product SET Sstock = %s WHERE Sname = %s""",
-                      (Vstock,Sname))
+                      (Sstock,Sname))
             conn.commit()
             print(curs.lastrowid)
         except:

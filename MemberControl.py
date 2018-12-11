@@ -27,10 +27,10 @@ class MemberCtrl(Control):
             return (src_result)
         except:
             print('there is wrong data, try again')
-    def update_obj(self, Mphone, Vpoint):
+    def update_obj(self, Mphone, Mpoint):
         try:
             curs.execute("""UPDATE t_member SET %s WHERE Mphone = '%s')""",
-                     (Vpoint, Mphone))
+                     (Mpoint, Mphone))
             conn.commit()
             print(curs.lastrowid)
         except:

@@ -41,8 +41,8 @@ while membernotdone:
     print('4) delete Member')
     command = input('type user command: ')
 
-    if command == '1': # 1) add Stock into a Stocktable
-        Mnumb, Mphone, Mpoint = map(str, input('다음을 차례로 입력하세요: 재고번호, 재고이름, 재고수량, 재고가격\n:::').split())
+    if command == '1': # 1) add Member into a Membertable
+        Mnumb, Mphone, Mpoint = map(str, input('다음을 차례로 입력하세요: 회원번호, 전화번호, 포인트\n:::').split())
         mnumb = Mnumb.strip(',')
         mphone = Mphone.strip(',')
         mpoint = Mpoint.strip(',')
@@ -51,27 +51,27 @@ while membernotdone:
         print('the added member is:', set_result)
         print('\n\n\n')
 
-    elif command == '2': # 2) find Stock
-        Sname = input('검색하고자 하는 재고 이름을 입력하세요:')
-        print(Sname)
-        Sname = Sname.strip('')
-        search_result = stockCtrl.search_obj(Sname)
+    elif command == '2': # 2) find Member
+        Mphone = input('검색하고자 하는 회원 전화번호를 입력하세요:')
+        print(Mphone)
+        mphone = Mphone.strip('')
+        search_result = MemberCtrl.search_obj(Mphone)
         print('검색결과:', search_result)
         print('\n\n\n')
 
-    elif command == '3': # 3) update Stock
-        Sname, Sstock = map(str,input('수정하고자 하는 재고 이름, 수량을 입력하세요:').split())
-        Sname = Sname.strip(',')
-        Sstock = int(Sstock)
-        stockCtrl.update_obj(Sname, Sstock)
-        update_result = stockCtrl.search_obj(Sname)
+    elif command == '3': # 3) update Member
+        Mphone, Mpoint = map(str,input('수정하고자 하는 회원 전화번호, 포인트을 입력하세요:').split())
+        Mphone = Mphone.strip(',')
+        Mpoint = int(Mpoint)
+        MemberCtrl.update_obj(Mphone, Mpoint)
+        update_result = MemberCtrl.search_obj(Mphone)
         print('수정결과: %s', update_result)
         print('\n\n\n')
 
     elif command == '4': # 4) delete Stock
         Sname= input('삭제하고자 하는 재고 이름을 입력하세요:')
-        stockCtrl.del_obj(Sname)
-        del_result = stockCtrl.search_obj(Sname)
+        MemberCtrl.del_obj(Mphone)
+        del_result = MemberCtrl.search_obj(Mphone)
         print('삭제결과: %s', del_result)
         print('\n\n\n')
 
