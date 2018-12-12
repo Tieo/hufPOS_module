@@ -8,12 +8,12 @@ curs = conn.cursor()
 
 
 class MemberCtrl(Control):
-    def set_obj(self, Mnumb, Mphone, Mpoint):
-        print('values: %s, %s, %s', Mnumb, Mphone, Mpoint)
+    def set_obj(self, Mphone, Mpoint):
+        print('values:  %s, %s', Mphone, Mpoint)
         try:
-            curs.execute("""INSERT INTO t_member (Mnumb, Mphone, Mpoint)
-                VALUES (%s, %s, %s)""",
-                         (Mnumb, Mphone, Mpoint))
+            curs.execute("""INSERT INTO t_member (Mphone, Mpoint)
+                VALUES (%s, %s)""",
+                         (Mphone, Mpoint))
             conn.commit()
             print(curs.lastrowid)
         except :

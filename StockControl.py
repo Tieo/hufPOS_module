@@ -37,8 +37,8 @@ class StockCtrl(Control):
 
     def update_obj(self, Sname, Sstock):
         try:
-            curs.execute("""UPDATE t_product SET Sstock = %s WHERE Sname = %s""",
-                      (Sstock,Sname))
+            curs.execute("""UPDATE t_stock SET Sstock = %s WHERE Sname = %s""",
+                         (Sstock, Sname))
             conn.commit()
             print(curs.lastrowid)
         except :
@@ -47,7 +47,7 @@ class StockCtrl(Control):
     def del_obj(self, Sname):
         try:
             curs.execute("""DELETE FROM t_stock WHERE Sname = %s""",
-                         (Sname))
+                         Sname)
             conn.commit()
             print(curs.lastrowid)
         except :

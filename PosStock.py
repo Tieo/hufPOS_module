@@ -61,19 +61,19 @@ while stocknotdone:
         print('\n\n\n')
 
     elif command == '3': # 3) update Stock
-        Sname, Sstock = map(str,input('수정하고자 하는 재고 이름, 수량을 입력하세요:').split())
+        Sname, Sstock = map(str, input('수정하고자 하는 재고 이름, 수량을 입력하세요:').split())
         Sname = Sname.strip(',')
-        Sstock = int(Sstock)
+        print(Sname, Sstock)
         stockCtrl.update_obj(Sname, Sstock)
         update_result = stockCtrl.search_obj(Sname)
-        print('수정결과: %s', update_result)
+        print('수정결과:', update_result)
         print('\n\n\n')
 
     elif command == '4': # 4) delete Stock
         Sname= input('삭제하고자 하는 재고 이름을 입력하세요:')
         stockCtrl.del_obj(Sname)
         del_result = stockCtrl.search_obj(Sname)
-        print('삭제결과: %s', del_result)
+        print('삭제결과:', del_result)
         print('\n\n\n')
 
     else:
